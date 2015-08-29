@@ -28,6 +28,7 @@ Piecewise, it seems to.  But it's a work in progress.
 * I was hoping for high frequency artifacts, but the most prominent signal is approximately 20 to 100 hz, corresponding to engine RPM.
 * Signal is essentially FM modulated. 
 * Initial version detects RPM, but needs calibration and testing.
+![](RPM_detector.grc.png)
 
 ###Optical 4F correlator for enhanced detection of headlights.
 * This is a fancy add-on for better detection.
