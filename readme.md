@@ -3,6 +3,8 @@
 
 Can we detect vehicles parked / idling along the highway at night?  This is a hardware and software project to test if this is possible via headlight emissions.
 
+![](icon.png)
+
 ## Why?
 
 For safety.  
@@ -20,11 +22,13 @@ Piecewise, it seems to.  But it's a work in progress.
 * Optionally, a second panel allows differential light collection, to reduce ambient signals.
 * The solar panel is mounted on a metal enclosure (altoids tin) to block RF noise.
 * The signal is transmitted as a differential pair, via a stereo headphone jack
+![Solar Panel Module](solar_panel.jpg)
 
 ###GnuRadio (software-defined radio) to detect the RPM signature(s)
 * I was hoping for high frequency artifacts, but the most prominent signal is approximately 20 to 100 hz, corresponding to engine RPM.
 * Signal is essentially FM modulated. 
 * Initial version detects RPM, but needs calibration and testing.
+![](RPM_detector.grc.png)
 
 ###Optical 4F correlator for enhanced detection of headlights.
 * This is a fancy add-on for better detection.
@@ -33,12 +37,11 @@ Piecewise, it seems to.  But it's a work in progress.
 * Schematic of the actual optical system.  (Not built yet)
 
 ### Examples of headlight spectrum 
-* Spectrum when turning lights off momentarily
-('spectrum_lights_on_and_off.png')
-* Overall spectrum
-('spectrum_44khz.png')
-('spectrum_engine_rev_slight.png')
-('spectrum_engine_revs.png')
+![Spectrum when turning lights off momentarily](spectrum_lights_on_and_off.png)
+![Overall spectrum](spectrum_44khz.png)
+![Overall spectrum](spectrum_engine_rev_slight.png)
+![Overall spectrum](spectrum_engine_revs.png)
+
 
 
 ### Infrequently Asked Questions
@@ -63,9 +66,9 @@ That would be another project...
 
 ## Sub projects
 ### Optical 4F correlator:
-('Headlight_Detector_4F_Correlator.png')
-('headlights_target.png')
-('filter_2000x2000.png')
+![Headlight_Detector_4F_Correlator](Headlight_Detector_4F_Correlator.png)
+![headlights_target](headlights_target.png)
+![resulting filter](filter_2000x2000.png)
 
 
 

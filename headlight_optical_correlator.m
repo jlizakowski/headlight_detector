@@ -15,8 +15,8 @@ function ret=flip_png(image)
 	ret = flipud(image);
 endfunction
 
-#vehicle= 	flip_png( img_to_arr( imread ("truck.png" )));
-vehicle= 	flip_png( img_to_arr( imread ("many_headlights.png" )));
+vehicle= 	flip_png( img_to_arr( imread ("truck.png" )));
+#vehicle= 	flip_png( img_to_arr( imread ("many_headlights.png" )));
 #vehicle = 	flip_png(img_to_arr( imread ("Le_Mans_2007_-_Night_250x250.jpg")));
 
 #target=	flip_png( img_to_arr( imread ("headlights3bigger.png" )));
@@ -86,14 +86,17 @@ subplot(3,5,14)
 	image( autoscale_arr2(autoscale_arr2(abs(unconvolved))   .* autoscale_arr2(abs(vehicle)) ) );
 	title("Unconvolved * vehicle");
 
-figure(2);
-		colormap(gray(256));
-		filt = abs(fftshift(fft2(target, 16.0 *size(target)(1), 16.0 * size(target)(2) )));
-		noise = (rand(size(filt)) - 0.5)*2;   #to dither the 256 level image. 16bit images not available in all installations of octave
-		image((noise + autoscale_arr2(filt * -1))/(256.0 +1 +1) * 256.0);
-		title("target FFT mag (log)");
-		
-imwrite(((noise + autoscale_arr2(filt * -1))/(256.0 +1 +1)), "foo2.png", 'Quality',100);
+#this takes a while to run, so commented out
+
+# figure(2);
+# 		colormap(gray(256));
+# 		filt = abs(fftshift(fft2(target, 16.0 *size(target)(1), 16.0 * size(target)(2) )));
+# 		noise = (rand(size(filt)) - 0.5)*2;   #to dither the 256 level image. 16bit images not available in all installations of octave
+# 		image((noise + autoscale_arr2(filt * -1))/(256.0 +1 +1) * 256.0);
+# 		title("target FFT mag (log)");
+# 
+# 		
+# #imwrite(((noise + autoscale_arr2(filt * -1))/(256.0 +1 +1)), "foo2.png", 'Quality',100);
 
 
 	
