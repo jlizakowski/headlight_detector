@@ -34,8 +34,8 @@ Piecewise, it seems to.  But it's a work in progress.
 
 ### Examples of headlight spectrum 
 ![Spectrum when turning lights off momentarily](spectrum_lights_on_and_off.png)
-![Overall spectrum](\spectrum_44khz.png)
-![Overall spectrum](.\spectrum_engine_rev_slight.png)
+![Overall spectrum](spectrum_44khz.png)
+![Overall spectrum](spectrum_engine_rev_slight.png)
 ![Overall spectrum](spectrum_engine_revs.png)
 
 
@@ -62,9 +62,9 @@ That would be another project...
 
 ## Sub projects
 ### Optical 4F correlator:
-[](Headlight_Detector_4F_Correlator.png)
-[](headlights_target.png)
-[](filter_2000x2000.png)
+![Headlight_Detector_4F_Correlator](Headlight_Detector_4F_Correlator.png)
+![headlights_target](headlights_target.png)
+![resulting filter](filter_2000x2000.png)
 
 
 
