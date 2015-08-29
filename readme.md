@@ -61,6 +61,7 @@ Spectrum when turning lights off momentarily
 Overall spectrum
 	img('spectrum_44khz.png')
 	img('spectrum_engine_rev_slight.png')
+	img('spectrum_engine_revs.png')
 	
 	
 
