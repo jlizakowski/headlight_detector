@@ -34,8 +34,8 @@ Piecewise, it seems to.  But it's a work in progress.
 
 ### Examples of headlight spectrum 
 [Spectrum when turning lights off momentarily](spectrum_lights_on_and_off.png)
-[Overall spectrum](spectrum_44khz.png)
-[Overall spectrum](spectrum_engine_rev_slight.png)
+[Overall spectrum](\spectrum_44khz.png)
+[Overall spectrum](.\spectrum_engine_rev_slight.png)
 [Overall spectrum](spectrum_engine_revs.png)
 
 
