@@ -3,7 +3,7 @@
 
 Can we detect vehicles parked / idling along the highway at night?  This is a hardware and software project to test if this is possible via headlight emissions.
 
-!(icon.png)
+![](icon.png)
 
 ## Why?
 
