@@ -25,26 +25,26 @@ Piecewise, it seems to.  But it's a work in progress.
 * Optionally, a second panel allows differential light collection, to reduce ambient signals.
 * The solar panel is mounted on a metal enclosure (altoids tin) to block RF noise.
 * The signal is transmitted as a differential pair, via a stereo headphone jack
-![Solar Panel Module](solar_panel.jpg)
+![Solar Panel Module](doc/solar_panel.jpg)
 
 ###GnuRadio (software-defined radio) to detect the RPM signature(s)
 * I was hoping for high frequency artifacts, but the most prominent signal is approximately 20 to 100 hz, corresponding to engine RPM.
 * Signal is FM modulated. 
 * Initial version detects RPM, but needs calibration and testing.
-![](RPM_detector.grc.png)
+![](doc/RPM_detector.grc.png)
 
 ###Optical 4F correlator for enhanced detection of headlights.
 * This is a fancy add-on for better detection.
 * All-optical image filter, performing fourier transforms with matched a filter.
 * Octave / matlab scripts to test the math with images of cars
 * Schematic of the actual optical system.  (Not built yet)
-![Headlight_Detector_4F_Correlator](Headlight_Detector_4F_Correlator.png)
+![Headlight_Detector_4F_Correlator](doc/Headlight_Detector_4F_Correlator.png)
 
 ### Examples of headlight spectrum 
-![Spectrum when turning lights off momentarily](spectrum_lights_on_and_off.png)
-![Overall spectrum](spectrum_44khz.png)
-![Overall spectrum](spectrum_engine_rev_slight.png)
-![Overall spectrum](spectrum_engine_revs.png)
+![Spectrum when turning lights off momentarily](doc/spectrum_lights_on_and_off.png)
+![Overall spectrum](doc/spectrum_44khz.png)
+![Overall spectrum](doc/spectrum_engine_rev_slight.png)
+![Overall spectrum](doc/spectrum_engine_revs.png)
 
 
 
@@ -71,7 +71,7 @@ That would be another project...
 ## Sub projects
 ### Optical 4F correlator:
 ![headlights_target](headlights_target.png)
-![resulting filter](filter_2000x2000.png)
+![resulting filter](doc/filter_2000x2000.png)
 
 
 
