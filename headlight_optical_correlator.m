@@ -15,8 +15,8 @@ function ret=flip_png(image)
 	ret = flipud(image);
 endfunction
 
-vehicle= 	flip_png( img_to_arr( imread ("headlights2.png" )));
-#vehicle= 	flip_png( img_to_arr( imread ("many_headlights.png" )));
+#vehicle= 	flip_png( img_to_arr( imread ("truck.png" )));
+vehicle= 	flip_png( img_to_arr( imread ("many_headlights.png" )));
 #vehicle = 	flip_png(img_to_arr( imread ("Le_Mans_2007_-_Night_250x250.jpg")));
 
 #target=	flip_png( img_to_arr( imread ("headlights3bigger.png" )));
