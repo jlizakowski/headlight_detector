@@ -32,37 +32,42 @@ An car idling at low RPM is likely parked.  As the engine runs, it causes the ba
 		Octave / matlab scripts to test the math with images of cars
 		Schematic of the actual optical system.  (Not built yet)
 
-		
-Does it work with incandescent / halogen headlights?
+### Examples of headlight spectrum 
+	* Spectrum when turning lights off momentarily
+	('spectrum_lights_on_and_off.png')
+	* Overall spectrum
+	('spectrum_44khz.png')
+	('spectrum_engine_rev_slight.png')
+		('spectrum_engine_revs.png')
+
+
+### Infrequently Asked Questions
+	
+#### Does it work with incandescent / halogen headlights?
 	Yes.  Traditional light bulbs warm and cool slowly (fractions of a second), but still transmit a surprising amount of RF noise, at least several khz.  
 	
-What about LEDs?
+#### What about LEDs?
 	These might work even better than halogens, depending on how well they filter the power supply.  Car manufacturers reduce costs wherever possible.  
 	
-Xenon? Other types?
+#### Xenon? Other types?
 	Maybe.  Requires testing.
 	
-Tail lights, turn signals, interior lights?
+#### Tail lights, turn signals, interior lights?
 	These should work the similar to headlights, but lower intensity.
 	
-Blue and Red strobe lights?
+#### Blue and Red strobe lights?
 	An interesting question.  Perhaps RPM can be extracted.  
 	
-What about just detecting colored strobe lights reflecting off clouds and haze?  Over the horizon?  
+#### What about just detecting colored strobe lights reflecting off clouds and haze?  Over the horizon?  
 	That would be another project...
-	
-Optical 4F correlator:
+
+## Sub projects	
+### Optical 4F correlator:
 	('Headlight_Detector_4F_Correlator.png')
 	('headlights_target.png')
 	('filter_2000x2000.png')
 	
-Spectrum when turning lights off momentarily
-	('spectrum_lights_on_and_off.png')
-Overall spectrum
-	('spectrum_44khz.png')
-	('spectrum_engine_rev_slight.png')
-	('spectrum_engine_revs.png')
-	
+
 	
 
 	
