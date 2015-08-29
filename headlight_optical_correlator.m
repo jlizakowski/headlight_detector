@@ -7,7 +7,7 @@ function ret=autoscale_arr2(arr2)
 	mn = min(min(arr2)) ;
 	mx = max(max(arr2)) ;
 	rg = mx - mn ;
-	ret = (arr2 - mn) / rg * 64.0   ;  #jet colormap has 64 entries
+	ret = (arr2 - mn) / rg * 256.0   ;  #jet colormap has 64 entries, unless jet(256)
 endfunction
 
 function ret=flip_png(image)
@@ -15,10 +15,16 @@ function ret=flip_png(image)
 	ret = flipud(image);
 endfunction
 
-truck= 	flip_png( img_to_arr( imread ("headlights2.png" )));
-target=	flip_png( img_to_arr( imread ("headlights_bothsizes.png" )));
+#vehicle= 	flip_png( img_to_arr( imread ("truck.png" )));
+vehicle= 	flip_png( img_to_arr( imread ("many_headlights.png" )));
+#vehicle = 	flip_png(img_to_arr( imread ("Le_Mans_2007_-_Night_250x250.jpg")));
 
-M1=truck;
+#target=	flip_png( img_to_arr( imread ("headlights3bigger.png" )));
+#target=	flip_png( img_to_arr( imread ("headlights_bothsizes.png" )));
+#target=	flip_png( img_to_arr( imread ("headlights_three.png" )));
+target=		flip_png( img_to_arr( imread ("headlights_target.png")));
+
+M1=vehicle;
 M2=target;
 
 # Alternate approach
@@ -39,8 +45,8 @@ unconvolved = fftshift(ifft2(fft2(stronger) .* conj(fft2(target))));
 
 # clf
 hold off
-colormap jet
 figure(1);
+colormap(jet(256));
 subplot(3,5,1)
 	image(autoscale_arr2(target));
 	title("target");
@@ -52,14 +58,14 @@ subplot(3,5,3)
 	title("target FFT phase");
 
 subplot(3,5,6)
-	image((truck));
-	title("truck");
+	image(autoscale_arr2(vehicle));
+	title("vehicle");
 subplot(3,5,7)
-	image(autoscale_arr2(log(abs(fftshift(fft2(truck))))));
-	title("truck FFT (log)");
+	image(autoscale_arr2(log(abs(fftshift(fft2(vehicle))))));
+	title("vehicle FFT (log)");
 subplot(3,5,8)
-	image(autoscale_arr2(arg(fftshift(fft2(truck)))));
-	title("truck FFT phase");
+	image(autoscale_arr2(arg(fftshift(fft2(vehicle)))));
+	title("vehicle FFT phase");
 	
 subplot(3,5,9)
 	image(autoscale_arr2(abs(unconvolved)));
@@ -74,15 +80,23 @@ subplot(3,5,12)
 	title("Correlation (phase)");
 	
 subplot(3,5,13)
-	image( autoscale_arr2(autoscale_arr2(result)   .* autoscale_arr2(abs(truck)) ) );
-	title("Correlation (magnitude) * truck");
+	image( autoscale_arr2(autoscale_arr2(result)   .* autoscale_arr2(abs(vehicle)) ) );
+	title("Correlation (magnitude) * vehicle");
 subplot(3,5,14)
-	image( autoscale_arr2(autoscale_arr2(abs(unconvolved))   .* autoscale_arr2(abs(truck)) ) );
-	title("Unconvolved * truck");
+	image( autoscale_arr2(autoscale_arr2(abs(unconvolved))   .* autoscale_arr2(abs(vehicle)) ) );
+	title("Unconvolved * vehicle");
 
 figure(2);
-	colormap gray
-		filter = abs(fftshift(fft2(target)));
-		image(autoscale_arr2(autoscale_arr2(filter) + autoscale_arr2(log(filter)) / 3.0) );
+		colormap(gray(256));
+		filt = abs(fftshift(fft2(target, 16.0 *size(target)(1), 16.0 * size(target)(2) )));
+		noise = (rand(size(filt)) - 0.5)*2;   #to dither the 256 level image. 16bit images not available in all installations of octave
+		image((noise + autoscale_arr2(filt * -1))/(256.0 +1 +1) * 256.0);
 		title("target FFT mag (log)");
+		
+imwrite(((noise + autoscale_arr2(filt * -1))/(256.0 +1 +1)), "foo2.png", 'Quality',100);
+
+
+	
+	
+	
 	

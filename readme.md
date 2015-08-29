@@ -21,9 +21,10 @@ An car idling at low RPM is likely parked.  As the engine runs, it causes the ba
 		The solar panel is mounted on a metal enclosure (altoids tin) to block RF noise.
 		The signal is transmitted as a differential pair, via a stereo headphone jack
 		
-====	GnuRadio software to detect the RPM signature(s)
+====	GnuRadio (software-defined radio) to detect the RPM signature(s)
 		I was hoping for high frequency artifacts, but the most prominent signal is approximately 20 to 100 hz, corresponding to engine RPM.
-		Signal is essentially FM modulated.  
+		Signal is essentially FM modulated. 
+		Initial version detects RPM, but needs calibration and testing.
 		
 ====	Optical 4F correlator for enhanced detection of headlights.
 		This is a fancy add-on for better detection.
@@ -54,6 +55,13 @@ Optical 4F correlator:
 	img('Headlight_Detector_4F_Correlator.png')
 	img('headlights_target.png')
 	img('filter_2000x2000.png')
+	
+Spectrum when turning lights off momentarily
+	img('spectrum_lights_on_and_off.png')
+Overall spectrum
+	img('spectrum_44khz.png')
+	img('spectrum_engine_rev_slight.png')
+	img('spectrum_engine_revs.png')
 	
 	
 
