@@ -38,7 +38,7 @@ Piecewise, it seems to.  But it's a work in progress.
 * All-optical image filter, performing fourier transforms with matched a filter.
 * Octave / matlab scripts to test the math with images of cars
 * Schematic of the actual optical system.  (Not built yet)
-![Headlight_Detector_4F_Correlator](doc/Headlight_Detector_4F_Correlator.png)
+![Headlight_Detector_4F_Correlator](./doc/Headlight_Detector_4F_Correlator.png)
 
 ### Examples of headlight spectrum 
 ![Spectrum when turning lights off momentarily](doc/spectrum_lights_on_and_off.png)
