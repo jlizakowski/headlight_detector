@@ -33,12 +33,10 @@ Piecewise, it seems to.  But it's a work in progress.
 * Schematic of the actual optical system.  (Not built yet)
 
 ### Examples of headlight spectrum 
-* Spectrum when turning lights off momentarily
-[](spectrum_lights_on_and_off.png)
-* Overall spectrum
-[](spectrum_44khz.png)
-[](spectrum_engine_rev_slight.png)
-[](spectrum_engine_revs.png)
+[Spectrum when turning lights off momentarily](spectrum_lights_on_and_off.png)
+[Overall spectrum](spectrum_44khz.png)
+[Overall spectrum](spectrum_engine_rev_slight.png)
+[Overall spectrum](spectrum_engine_revs.png)
 
 
 
