@@ -1,14 +1,17 @@
 
 # Headlight Detector
 
-Can we detect vehicles parked / idling along the highway at night?  This is a hardware and software project to test if this is possible via headlight emissions.
+Can we detect vehicles parked / idling along the highway at night?  
+
+This is a hardware and software project to test if this is possible via headlight emissions.
 
 ![](icon.png)
 
 ## Why?
 
 For safety.  
-Coincidentally, this might also detect speedtraps (vehicles idling on a freeway).
+
+...Coincidentally, this might also detect speed traps (vehicles idling on a freeway).
 
 ## How does it work?
 An car idling at low RPM is likely parked.  As the engine runs, it causes the battery voltage to fluctuate (both generating the spark for cylinders, and also due to the alternator not having perfect filters). Headlights are high-wattage transmitters.  Minor fluctuations in battery voltage should be detectable in the light output.  
@@ -26,7 +29,7 @@ Piecewise, it seems to.  But it's a work in progress.
 
 ###GnuRadio (software-defined radio) to detect the RPM signature(s)
 * I was hoping for high frequency artifacts, but the most prominent signal is approximately 20 to 100 hz, corresponding to engine RPM.
-* Signal is essentially FM modulated. 
+* Signal is FM modulated. 
 * Initial version detects RPM, but needs calibration and testing.
 ![](RPM_detector.grc.png)
 
@@ -35,6 +38,7 @@ Piecewise, it seems to.  But it's a work in progress.
 * All-optical image filter, performing fourier transforms with matched a filter.
 * Octave / matlab scripts to test the math with images of cars
 * Schematic of the actual optical system.  (Not built yet)
+![Headlight_Detector_4F_Correlator](Headlight_Detector_4F_Correlator.png)
 
 ### Examples of headlight spectrum 
 ![Spectrum when turning lights off momentarily](spectrum_lights_on_and_off.png)
@@ -66,7 +70,6 @@ That would be another project...
 
 ## Sub projects
 ### Optical 4F correlator:
-![Headlight_Detector_4F_Correlator](Headlight_Detector_4F_Correlator.png)
 ![headlights_target](headlights_target.png)
 ![resulting filter](filter_2000x2000.png)
 
