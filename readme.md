@@ -25,7 +25,7 @@ Piecewise, it seems to.  But it's a work in progress.
 * Optionally, a second panel allows differential light collection, to reduce ambient signals.
 * The solar panel is mounted on a metal enclosure (altoids tin) to block RF noise.
 * The signal is transmitted as a differential pair, via a stereo headphone jack
-![Solar Panel Module](doc/solar_panel.jpg)
+![Solar Panel Module](/doc/solar_panel.jpg)
 
 ###GnuRadio (software-defined radio) to detect the RPM signature(s)
 * I was hoping for high frequency artifacts, but the most prominent signal is approximately 20 to 100 hz, corresponding to engine RPM.
