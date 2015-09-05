@@ -25,6 +25,9 @@ Piecewise, it seems to.  But it's a work in progress.
 * Optionally, a second panel allows differential light collection, to reduce ambient signals.
 * The solar panel is mounted on a metal enclosure (altoids tin) to block RF noise.
 * The signal is transmitted as a differential pair, via a stereo headphone jack
+
+Status: Working.  Tested at close range.  Circuit may need to change for long distance.
+
 ![Solar Panel Module](/doc/solar_panel.jpg)
 
 ###GnuRadio (software-defined radio) to detect the RPM signature(s)
@@ -33,12 +36,17 @@ Piecewise, it seems to.  But it's a work in progress.
 * Initial version detects RPM, but needs calibration and testing.
 ![](./doc/RPM_detector.grc.png)
 
+Status: Signs of working, needs calibration and testing.  Was able to detect RPM variations and output a signal that should be proportional to RPM.  
+
+
 ###Optical 4F correlator for enhanced detection of headlights.
 * This is a fancy add-on for better detection.
 * All-optical image filter, performing fourier transforms with matched a filter.
 * Octave / matlab scripts to test the math with images of cars
 * Schematic of the actual optical system.  (Not built yet)
 ![Headlight_Detector_4F_Correlator](./doc/Headlight_Detector_4F_Correlator.png)
+
+Status: Theoretical, simulated.  Implementation is conceptually simple, but likely difficult to get working properly.  
 
 ### Examples of headlight spectrum 
 ![Spectrum when turning lights off momentarily](doc/spectrum_lights_on_and_off.png)
@@ -67,6 +75,9 @@ An interesting question.  Perhaps RPM can be extracted.
 
 #### What about just detecting colored strobe lights reflecting off clouds and haze?  Over the horizon?  
 That would be another project...
+
+#### Could this work from a satellite?
+It's probably easier than most things done from space.
 
 ## Sub projects
 ### Optical 4F correlator:
