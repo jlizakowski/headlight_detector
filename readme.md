@@ -29,6 +29,7 @@ Piecewise, it seems to.  But it's a work in progress.
 Status: Working.  Tested at close range.  Circuit may need to change for long distance.
 
 ![Solar Panel Module](/doc/solar_panel.jpg)
+![Fritzing Diagram](/doc/solar_panel_bb.png)
 
 ###GnuRadio (software-defined radio) to detect the RPM signature(s)
 * I was hoping for high frequency artifacts, but the most prominent signal is approximately 20 to 100 hz, corresponding to engine RPM.
