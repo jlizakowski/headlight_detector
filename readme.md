@@ -9,9 +9,9 @@ This is a hardware and software project to test if this is possible via headligh
 
 ## Why?
 
-For safety.  
+For safety...  
 
-...Coincidentally, this might also detect speed traps (vehicles idling on a freeway).
+Coincidentally, this might also detect speed traps (vehicles idling on a freeway).
 
 ## How does it work?
 An car idling at low RPM is likely parked.  As the engine runs, it causes the battery voltage to fluctuate (both generating the spark for cylinders, and also due to the alternator not having perfect filters). Headlights are high-wattage transmitters.  Minor fluctuations in battery voltage should be detectable in the light output.  
@@ -36,7 +36,7 @@ Status: Working.  Tested at close range.  Circuit may need to change for long di
 * Initial version detects RPM, but needs calibration and testing.
 ![](./doc/RPM_detector.grc.png)
 
-Status: Signs of working, needs calibration and testing.  Was able to detect RPM variations and output a signal that should be proportional to RPM.  
+Status: Signs of working, needs calibration and testing.  Was able to detect RPM variations and output a signal that should be proportional to RPM.  Didn't work as well in an urban environment (busy parking ramp).
 
 
 ###Optical 4F correlator for enhanced detection of headlights.
@@ -81,7 +81,7 @@ It's probably easier than most things done from space.
 
 ## Sub projects
 ### Optical 4F correlator:
-![headlights_target](headlights_target.png)
+![headlights_target](headlights_bothsizes.png)
 ![resulting filter](doc/filter_2000x2000.png)
 
 
